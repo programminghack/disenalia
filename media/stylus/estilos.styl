@@ -1,0 +1,534 @@
+@import "normalize.styl"
+
+@font-face
+	font-family Roboto
+	font-style light
+	src url("/media/fonts/Roboto/Roboto.ttf")
+
+morado = #32006E
+gris_verdoso = #33D9C2
+verde_azulado = #32006E
+
+body,
+html
+	height 100%
+
+li,
+ul
+	padding 0
+	list-style none
+
+p
+	margin 0
+	padding 0
+
+body
+	background #fff
+	font-size 16px
+
+footer
+	border-bottom 2px solid black
+	color #0F4051
+	padding 1em 0
+	width 100%
+
+
+#menu-home
+	background morado
+	overflow hidden
+	padding .4em 0
+	width 100%
+	& img
+		margin 0 3em
+		float left
+	& ul
+		margin 0 2em
+		padding 0
+		float left
+		li
+			display inline-block
+
+
+//Inician los estilos para el Administrador del Blog
+
+#body-admin
+	background #E6E6E6
+	font-family Roboto
+
+#box-login
+	padding 1em
+	background white
+	border-radius .3em
+	position absolute
+	left 40%
+	top 40%
+	width 300px
+	& form
+		text-align center
+		& input[type="text"], input[type="password"]
+			height 30px
+			margin .8em auto
+			padding 0 .4em
+			width 90%
+		& input[type="submit"]
+			border none
+			outline none
+			color white
+			background #515151
+			border-bottom .2em solid #343434
+			padding .4em .6em
+			margin .6em 0
+
+#cabezera
+	background morado
+	overflow hidden
+	height 65px
+	width 100%
+	& #company
+		float left
+		padding .5em
+		border-right 1px solid rgba(255,255,255,0.5)
+		& a
+			color white
+			font-size 3em
+			text-decoration none
+	& #control-account
+		float right
+		& .admin
+			float left
+			cursor pointer
+			border-right 1px solid rgba(255,255,255,0.5)
+			border-left 1px solid rgba(255,255,255,0.5)
+			height 65px
+			padding .2em 1em 0em 1em
+			& figure
+				float left
+				& img
+					border-radius 50%
+					border 2px solid white
+					height 50px
+					margin-top .2em
+					width 50px
+			& div
+				float left
+				margin-top .8em
+				margin-left .5em
+				& p
+					color white
+					font-size .8em
+					margin .2em
+			& span
+				color white
+				font-size 1.1em
+				float left
+				margin 1em 0 0 .8em
+
+		& .close
+			float left
+			padding 1em .6em 0 1em
+			& a
+				text-decoration none
+				& span
+					color white
+					font-size 2.5em
+
+.show-content-user
+	display none
+	background white
+	box-shadow 0 0px 5px rgba(0,0,0,.6)
+	position absolute
+	top 65px
+	right 65px
+	width 200px
+	&:hover
+		box-shadow 0 0px 13px rgba(0,0,0,.8)
+	& ul
+		margin 0
+		& a
+			text-decoration none
+			& li
+				padding 1em
+				color gris_verdoso
+				transition all .7s ease
+				&:hover
+					background morado
+					color white
+				& input
+					display block !important
+					cursor pointer
+					width 100% !important
+					height 100% !important
+					opacity 0 !important
+					overflow hidden !important
+					margin-top  -20px
+
+
+#menu-administrator
+    & .admin-m
+		background white
+		position fixed
+		top 4em
+		left .7em
+        & li a
+			color gris_verdoso
+			display block
+			font-size .8em
+			padding 1em
+			text-align center
+			text-decoration none
+			list-style none
+			& span
+				font-size 3em
+				color gris_verdoso
+				display block
+				margin-bottom .3em
+
+#home-admin-content
+	margin-top 40px
+	margin-left 140px
+	max-width 1400px
+	& h1
+		color gris_verdoso
+	& .content-estatics-one
+		border-collapse: separate;
+		border-spacing: 0 .9em;
+		width 100%
+		& h1
+			background morado
+			padding 0
+			margin 0
+			width 100%
+		& .title-cabeza
+			background morado
+			& td
+				color #fff
+				padding .3em
+				font-size 1.5em
+		& .titles-estatics-one
+			background #fff
+			& th
+				color #1abc9c
+				padding .7em
+		& .colum-content-statics
+			background #fff
+			& td
+				color gris_verdoso
+				padding .5em
+				margin-top 2em
+		& .paginator-statics
+			background morado
+			& td
+				color #fff
+				padding .7em
+
+#container-data-post
+	margin-top 40px
+	margin-left 140px
+	max-width 1400px
+	& h1
+		color gris_verdoso
+	& .table-content-post
+		border-collapse: separate;
+		border-spacing: 0 .5em;
+		width 100%
+		& .reference-table
+			background morado
+			& td
+				color white
+				font-size 1.5em
+				padding .3em
+		& .titles-content
+			background #fff
+			& th
+				color #1abc9c
+				padding .7em
+		& .data-content
+			box-shadow 0 2px 3px rgba(0,0,0,0.3)
+			background #fff
+			width 100%
+			&:hover
+				back
+			& td
+				color gris_verdoso
+				padding .7em
+			& .actions-content
+				text-align center
+				& a
+					color gris_verdoso
+					font-size 1.4em
+					text-decoration none
+					margin 0 .3em
+					transition .4s ease
+					&:hover
+						color #1abc9c
+	& .button-new-post
+		background white
+		border-radius 50%
+		box-shadow 0px 0px 6px rgba(0,0,0,0.3)
+		color morado
+		cursor pointer
+		text-align center
+		padding .6em
+		transition: .5s ease
+		position fixed
+		bottom 1em
+		right 1em
+		height 40px
+		width 40px
+		&:hover
+			background #1abc9c
+			color white
+		& span
+			font-size 1.4em
+			line-height 40px
+
+#container-data-category
+	margin-top 40px
+	margin-left 140px
+	max-width 1400px
+	& h1
+		color gris_verdoso
+	& .table-content-category
+		border-collapse: separate;
+		border-spacing: 0 .5em;
+		width 100%
+		& .reference-table
+			background morado
+			& td
+				color white
+				font-size 1.5em
+				padding .3em
+		& .titles-content
+			background #fff
+			& th
+				color #1abc9c
+				padding .7em
+		& .data-content
+			box-shadow 0 2px 3px rgba(0,0,0,0.3)
+			background #fff
+			& td
+				color gris_verdoso
+				padding .7em
+			& .actions-content
+				text-align center
+				& a
+					color gris_verdoso
+					font-size 1.4em
+					text-decoration none
+					margin 0 .3em
+					transition .4s ease
+					&:hover
+						color #1abc9c
+	& .button-new-category
+		background white
+		border-radius 50%
+		box-shadow 0px 0px 6px rgba(0,0,0,0.3)
+		color morado
+		cursor pointer
+		text-align center
+		padding .6em
+		transition: .5s ease
+		position fixed
+		bottom 1em
+		right 1em
+		height 40px
+		width 40px
+		&:hover
+			background #1abc9c
+			color white
+		& span
+			font-size 1.4em
+			line-height 40px
+
+
+.form-add-post, .form-add-category
+	display none
+	box-shadow 0px 0px 9px rgba(0,0,0,.3)
+	bottom 0
+	background white
+	max-height 500px
+	bottom 5em
+	position fixed
+	right 2em
+	overflow auto
+	text-align center
+	padding-bottom 3em
+	max-width 400px
+	& h1
+		font-size 1.4em
+	& .cerrar
+		position absolute
+		top .3em
+		right .4em
+		color morado
+		cursor pointer
+		font-size 1.7em
+		transition: .5s ease
+	& .enviar-form
+		position absolute
+		top .9em
+		right 2.7em
+		color morado
+		cursor pointer
+		transition: .5s ease
+		text-decoration none
+	& .cont
+		margin 0 auto
+		width 400px
+		position relative
+		& form
+			& input[type="text"]
+				color verde_azulado
+				display block
+				font-size 1em
+				height 30px
+				margin .56em auto
+				padding 0 1em
+				width 80%
+				&:focus
+					border none
+					outline none
+					border 3px solid morado
+			& .label1
+				box-shadow 0 2px 6px rgba(0,0,0,.7)
+				background morado
+				display block
+				color white
+				font-size 1.2em
+				font-weight normal
+				text-align left
+				margin .6em 0
+				padding .5em 1em
+			& .radios
+				text-align center
+				& .label2
+					color whitesmoke
+					padding 0 1em
+					font-size 1.4em
+			& select
+				color verde_azulado
+				border morado 2px solid
+				display block
+				font-size 1.1em
+				margin 2em auto
+				height 40px
+				text-align center
+				outline none
+				width 300px
+			& .enviar-form-int
+				display inline-block
+				background white
+				border-radius 50%
+				box-shadow 0px 0px 6px rgba(0,0,0,0.7)
+				color morado
+				cursor pointer
+				text-align center
+				font-size 1.4em
+				padding .6em
+				transition .5s ease
+				margin 0 auto
+				text-decoration none
+				&:hover
+					background #1abc9c
+					color white
+				$ span
+					display block
+
+.form-edit-post
+	text-align center
+	& .cont
+		margin 0 auto
+		padding 3em 0
+		width 900px
+		& h1
+			color verde_azulado
+			font-size 2.3em
+			text-align center
+		& form
+			& input[type="text"]
+				color verde_azulado
+				display block
+				font-size 1.2em
+				height 40px
+				margin 2em 0
+				padding 0 1em
+				width 95%
+				&:focus
+					border none
+					outline none
+					border 3px solid morado
+			& .label1
+				color verde_azulado
+				display block
+				text-align center
+				padding 1em 0
+				font-size 1.4em
+			& .radios
+				text-align center
+				& .label2
+					color verde_azulado
+					padding 0 1em
+					font-size 1.4em
+			& select
+				color verde_azulado
+				border 1px solid verde_azulado
+				display block
+				font-size 1.1em
+				margin 2em auto
+				height 40px
+				text-align center
+				outline none
+				width 300px
+			& input[type="submit"]
+				border verde_azulado 3px solid
+				border-radius .4em
+				background none
+				color verde_azulado
+				cursor pointer
+				margin 2em auto
+				padding .6em
+				width 180px
+				transition: .5s ease
+				&:hover
+					border #1abc9c 3px solid
+					background #1abc9c
+					color white
+
+
+.form-edit-category
+	text-align center
+	& .cont
+		margin 0 auto
+		padding 3em 0
+		width 900px
+		& h1
+			color verde_azulado
+			font-size 2.3em
+			text-align center
+		& form
+			& input[type="text"]
+				color verde_azulado
+				display block
+				font-size 1.2em
+				height 40px
+				margin 2em 0
+				padding 0 1em
+				width 95%
+				&:focus
+					border none
+					outline none
+					border 3px solid morado
+			& input[type="submit"]
+				border verde_azulado 3px solid
+				border-radius .4em
+				background none
+				color verde_azulado
+				cursor pointer
+				margin 2em auto
+				padding .6em
+				width 180px
+				transition: .5s ease
+				&:hover
+					border #1abc9c 3px solid
+					background #1abc9c
+					color white

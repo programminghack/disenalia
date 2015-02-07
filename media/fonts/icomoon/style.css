@@ -1,0 +1,141 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-mpv814');
+	src:url('fonts/icomoon.eot?#iefix-mpv814') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-mpv814') format('woff'),
+		url('fonts/icomoon.ttf?-mpv814') format('truetype'),
+		url('fonts/icomoon.svg?-mpv814#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-drop-down:before {
+	content: "\e600";
+}
+
+.icon-plus:before {
+	content: "\e114";
+}
+
+.icon-cross:before {
+	content: "\e117";
+}
+
+.icon-menu:before {
+	content: "\e120";
+}
+
+.icon-delete:before {
+	content: "\e601";
+}
+
+.icon-heart:before {
+	content: "\e602";
+}
+
+.icon-eye:before {
+	content: "\e603";
+}
+
+.icon-user:before {
+	content: "\e604";
+}
+
+.icon-pencil:before {
+	content: "\e605";
+}
+
+.icon-add-user:before {
+	content: "\e606";
+}
+
+.icon-remove-user:before {
+	content: "\e607";
+}
+
+.icon-tags:before {
+	content: "\e608";
+}
+
+.icon-home:before {
+	content: "\e609";
+}
+
+.icon-switch:before {
+	content: "\e60a";
+}
+
+.icon-calendar:before {
+	content: "\e60b";
+}
+
+.icon-coments:before {
+	content: "\e60c";
+}
+
+.icon-google-plus:before {
+	content: "\e60d";
+}
+
+.icon-pinterest:before {
+	content: "\e60e";
+}
+
+.icon-youtube-play:before {
+	content: "\e60f";
+}
+
+.icon-paper-plane:before {
+	content: "\e610";
+}
+
+.icon-envelope:before {
+	content: "\e611";
+}
+
+.icon-github-alt:before {
+	content: "\e612";
+}
+
+.icon-instagram:before {
+	content: "\e613";
+}
+
+.icon-twitter:before {
+	content: "\e614";
+}
+
+.icon-facebook:before {
+	content: "\e615";
+}
+
+.icon-lapiz:before {
+	content: "\e625";
+}
+
+.icon-lupa:before {
+	content: "\e626";
+}
+
+.icon-doc:before {
+	content: "\e627";
+}
+
+.icon-navegar:before {
+	content: "\e628";
+}
+

@@ -3,6 +3,7 @@
 	Avatar::edit($user);
 	$value = new Avatar();
 	$avatar = $value->get($user);
+	
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +48,7 @@
 				</form>
 			</a>
 			</li>
-			<a href=""><li>Editar Perfil</li></a>
+			<a href="/edit"><li>Editar Perfil</li></a>
 		</ul>
 	</div>
 

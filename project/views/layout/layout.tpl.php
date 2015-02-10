@@ -19,8 +19,9 @@
 		</ul>
 	</header>
 
+		<main class="container">
 			<?=$tpl_content?>
-
+		</main>
 	<footer>
 	</footer>
 	<script src="/media/js/jquery.js"></script>

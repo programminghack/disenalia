@@ -90,7 +90,7 @@
             extract($values);
             if($this->conn->getConsultar("
                 UPDATE user
-                SET name_user = '$name', nick_user = 'nick_neme', avatar_user = '$avatar', email_user = '$email', type_user = '$type', direccion_user = '$direccion', ciudad_user = '$ciudad', postal_user = '$postal', web_user = '$web'
+                SET name_user = '$name', email_user = '$email', twitter_user = '$twitter', facebook_user='$facebook', password_user='$password'
                 WHERE name_user = '$name'
             "))
             {

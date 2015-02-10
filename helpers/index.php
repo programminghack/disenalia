@@ -14,6 +14,8 @@ if (defined('start') || isset($start)) {
 	require_once APP_PATH . 'clases'. SLASH . "paginacion" . SLASH . "paginacion.php";
 	require_once APP_PATH . 'clases'. SLASH . "date" . SLASH . "date.php";
 	require_once APP_PATH . 'clases'. SLASH . "session" . SLASH . "SessionGenerate.php";
+	require_once APP_PATH . 'clases'. SLASH . "cookies" . SLASH . "Cookies.php";
+	require_once APP_PATH . 'clases'. SLASH . "redirection" . SLASH . "Redirection.php";
 }
 /*$prueba = new Consultas();
 

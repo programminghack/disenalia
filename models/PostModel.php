@@ -118,8 +118,8 @@
                 WHERE id_post = '$id'
             "))
             {
-                echo "<script>alert('Editado Correctamente')</script>";
-                header('Location:'.Rutas::getDireccion('admin'));
+                Cookies::set("edit","Se a editado correctamente","10-s");
+                Redirection::go("post");
             }else
             {
                 exit("Ocurrio un error en la modificacion");

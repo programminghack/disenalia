@@ -118,7 +118,7 @@
                 WHERE id_post = '$id'
             "))
             {
-                Cookies::set("edit","Se a editado correctamente","10-s");
+                Cookies::set("edit","Se a editado correctamente","300-s");
                 Redirection::go("post");
             }else
             {

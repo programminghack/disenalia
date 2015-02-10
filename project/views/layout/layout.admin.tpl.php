@@ -32,7 +32,7 @@
 				<!-- Elemento Desplegable -->
 			</div>
 			<div class="close">
-				<a href="/deletesession"><span class="icon-switch"></span></a>
+				<a href="/deleteSession"><span class="icon-switch"></span></a>
 			</div>
 		</div>
 	</header>

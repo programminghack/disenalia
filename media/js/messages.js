@@ -1,3 +1,4 @@
+;(function($,window){
 var docCookies = {
 getItem: function (sKey) {
     if (!sKey) { return null; }
@@ -20,11 +21,14 @@ var cookies = docCookies.keys();
 for (var i = 0; i < cookies.length;  i++){
 	for (var j = 0; j < values.length;  j++) {
 		if(cookies[i] === values[j]){
-			$("#msj img").attr("src","/media/img/"+values[j]+".png")
-			var texto = String(docCookies.getItem(values[j]))
-			texto = texto.replace("+"," ")
-			$("#msj p").text(texto)
-			console.log(docCookies.getItem(values[j]))
+			$("#msj").attr("class",values[j]+"_msj");
+			$("#msj img").attr("src","/media/img/"+values[j]+".png");
+			var texto = String(docCookies.getItem(values[j]));
+			var patron = "+";
+			texto = texto.replace(/\+/g," ");
+			$("#msj p").text(texto);
+			$(".hide").css("display","block")
 		}
 	}
 }
+})($,window)

@@ -15,8 +15,10 @@
 		</form>
 	</section>
 
+
 	<script src="/media/js/jquery.js"></script>
 	<script src="/media/js/ajax.js"></script>
+
 
 	
 </body>

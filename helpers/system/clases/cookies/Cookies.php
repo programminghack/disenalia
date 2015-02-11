@@ -1,6 +1,6 @@
-<?php 
+<?php
 	class Cookies{
-		
+
 		public static function set($name,$value,$time, $path = "/", $domain = Null, $secure = False, $httponly = False)
 		{
 
@@ -33,7 +33,7 @@
 			return $durationTime;
 		}
 
-		public static function get($name)
+		public static function get($name = Null)
 		{
 			return $_COOKIE[$name];
 		}
@@ -41,6 +41,11 @@
 		public static function delete($name)
 		{
 			setcookie($name, "", 1);
+		}
+
+		public static function getAll()
+		{
+			return array_keys($_COOKIE);
 		}
 
 	}

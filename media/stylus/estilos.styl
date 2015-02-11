@@ -35,18 +35,43 @@ footer
 #msj
 	background rgba(255, 255, 255, .7)
 	bottom 1em
+	border-radius .4em
 	left 1em
 	box-shadow 0px 0px 3px rgba(0, 0, 0, .45)
 	position absolute
-	padding 2em 0 .4em 0
+	padding 0 0 .6em 0
 	text-align center
 	width 300px
 	z-index 10000
-	& img 
+	& figure
 		display block
+		padding .5em 0
+		width 100%
+		& img
+			width 30px
+	& p
+		color #202020
+		padding .4em 0
+		margin-top .4em
+		font-weight bold
+
 .edit_msj
-	img
+	border 1px solid #21af7d
+	figure
 		background #49B591
+.delete_msj
+	border 1px solid #a11c1c
+	figure
+		background #c33232
+.complete_msj
+	border 1px solid #21af7d
+	figure
+		background #49B591
+.alert_msj
+	border 1px solid #d5d02f
+	figure
+		background #e3e84c
+
 
 .hide
 	display none

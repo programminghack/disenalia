@@ -16,10 +16,6 @@ if (defined('start') || isset($start)) {
 	require_once APP_PATH . 'clases'. SLASH . "session" . SLASH . "SessionGenerate.php";
 	require_once APP_PATH . 'clases'. SLASH . "cookies" . SLASH . "Cookies.php";
 	require_once APP_PATH . 'clases'. SLASH . "redirection" . SLASH . "Redirection.php";
-	if("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] =! Rutas::getDireccion("login"))
-	{
-		require_once APP_PATH . 'clases'. SLASH . "messages" . SLASH . "Messages.html";
-	}
 }
 /*$prueba = new Consultas();
 

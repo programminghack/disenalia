@@ -1,6 +1,6 @@
 <?php
 if (defined('start') || isset($start)) {
-	define("ROOT_RUTA", "http://".$_SERVER['SERVER_NAME']. ":8888" . "/");
+	define("ROOT_RUTA", "http://".$_SERVER['HTTP_HOST']. "/");
 	define('SLASH', DIRECTORY_SEPARATOR);
 	define('ROOT', realpath(dirname(__FILE__)) . SLASH);
 	define('APP_PATH', ROOT . 'system' . SLASH);
@@ -16,7 +16,10 @@ if (defined('start') || isset($start)) {
 	require_once APP_PATH . 'clases'. SLASH . "session" . SLASH . "SessionGenerate.php";
 	require_once APP_PATH . 'clases'. SLASH . "cookies" . SLASH . "Cookies.php";
 	require_once APP_PATH . 'clases'. SLASH . "redirection" . SLASH . "Redirection.php";
-	require_once APP_PATH . 'clases'. SLASH . "messages" . SLASH . "Messages.html";
+	if("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] =! Rutas::getDireccion("login"))
+	{
+		require_once APP_PATH . 'clases'. SLASH . "messages" . SLASH . "Messages.html";
+	}
 }
 /*$prueba = new Consultas();
 

@@ -1,6 +1,7 @@
 $("#submit-form").click(function(e){
 		e.preventDefault();
-			ruta = "http://" + window.location.hostname + ":8888",
+			puerto = window.location.port
+			ruta = "http://" + window.location.hostname + ":" + puerto,
 			name = $(".user_data").val(),
 			password = $(".password_data").val();
 

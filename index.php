@@ -35,4 +35,4 @@ $request->execute();
 
 
 // Plus
-?>
+require_once APP_PATH . 'clases'. SLASH . "messages" . SLASH . "Messages.php";

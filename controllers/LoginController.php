@@ -11,7 +11,7 @@
 		{
 			$consulta = new UserModel();
 			$values = $consulta->get("name_user",$_POST['name']);
-			return new View("admin/userConsultas", ["values" => $values, "layout" => "off"]);
+			return $values;
 		}
 
 	}

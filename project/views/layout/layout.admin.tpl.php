@@ -3,7 +3,7 @@
 	Avatar::edit($user);
 	$value = new Avatar();
 	$avatar = $value->get($user);
-	
+
 ?>
 
 <!DOCTYPE html>

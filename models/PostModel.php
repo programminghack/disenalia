@@ -93,19 +93,20 @@
 
         public function set($data = array())
         {
-                    extract($data);
-                    if($this->conn->getConsultar("
-                            INSERT INTO post
-                            (title_post, img_post, date_post, prev_post, post_post, id_category, id_user)
-                            VALUES
-                            ('$title', '$imgIn', '$date', '$prev','$post', '$category', '$iduser')
-                        "))
-                    {
-                       echo "<script>alert('Registrado Correctamente')</script>";
-                header('Location:'.Rutas::getDireccion('admin'));
-                    }else{
-                        exit("El registro no se ha completado por algun motivo");
-                    }
+         	extract($data);
+            if($this->conn->getConsultar("
+                INSERT INTO post
+                (title_post, img_post, date_post, prev_post, post_post, id_category, id_user)
+                VALUES
+                ('$title', '$imgIn', '$date', '$prev','$post', '$category', '$iduser')
+            "))
+             {
+					Cookies::set("complete","Se a guardado correctamente","20-s");
+					Redirection::go("post");
+            	}else{
+						Cookies::set("alert","Error: No se a podido guardar. Intente de nuevo ","20-s");
+						Redirection::go("post");
+               }
 
         }
 
@@ -118,11 +119,12 @@
                 WHERE id_post = '$id'
             "))
             {
-                Cookies::set("edit","Se a editado correctamente","300-s");
+                Cookies::set("edit","Se a editado correctamente","20-s");
                 Redirection::go("post");
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+					Cookies::set("alert","Error: No se a podido modificar. Intente de nuevo ","20-s");
+					Redirection::go("post");
             }
         }
 
@@ -132,11 +134,12 @@
                 DELETE FROM post
                 WHERE id_post = '$id'
             ")){
-                echo "<script>alert('Eliminado Correctamente')</script>";
-                header('Location:'.Rutas::getDireccion('admin'));
+					Cookies::set("delete","Se a eliminado correctamente","20-s");
+					Redirection::go("post");
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+					Cookies::set("alert","Error: No se a podido Eliminar. Intente de nuevo ","20-s");
+					Redirection::go("post");
             }
         }
     }

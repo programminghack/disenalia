@@ -1,30 +1,24 @@
 <?php
 session_start();
-class EditUserController{
+class AdminUsersController{
 
 	public function indexAction()
 		{
 			if(isset($_SESSION['user']) && $_SESSION['type'] == "admin"){
 				$user = $_SESSION['user'];
 	        	$consulta = new UserModel();
-	        	$values  = $consulta->get('name_user',$user);
-	        	return new View("admin/editUser", ["title"=>"Edita tu usuario | Administrador","user" => $user, "layout" => "on", "nameLayout" => "layout.admin","values"=>$values]);
+	        	$values  = $consulta->getAll();
+	        	return new View("admin/adminUsers", ["title"=>"Administra los usuarios | Administrador","user" => $user, "layout" => "on", "nameLayout" => "layout.admin","rows"=>$values]);
 	        }else{
 				header('Location:'.Rutas::getDireccion('login'));
 			}
 		}
 
-	public function selectAction(){
-		$user = $_POST['name'];
-		$consulta = new UserModel();
-		return $edit_user = $consulta->get('name_user',$user);
-
-	}
-
 	public function updateAction(){
 		if (isset($_POST['add'])) {
 		$consulta = new UserModel();
-		return $consulta->edit($_SESSION['user'],[
+		$user=$_POST['name'];
+		return $consulta->edit($user,[
 				"name" => $_POST['name'],
 				"password" => Security::getEncrypt($_POST['password']),
 				"facebook" => $_POST['facebook'],

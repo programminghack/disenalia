@@ -6,11 +6,11 @@
 		?>		
 		
 		
-		<input type="text" placeholder="Nombre" name="name" value="<?=$row['name_user']?>"/>
-		<input type="password" placeholder="Contraseña" name="password" />
-		<input type="text" placeholder="Facebook" name="facebook" value="<?=$row['facebook_user']?>" />
-		<input type="text" placeholder="Twitter" name="twitter" value="<?=$row['twitter_user']?>"/>
-		<input type="text" placeholder="email" name="email" value="<?=$row['email_user']?>"/>
+		<label for="name">Nombre </label><input type="text" placeholder="Nombre" id="name" name="name" value="<?=$row['name_user']?>"/>
+		<label for="password">Contraseña </label><input type="password" placeholder="Contraseña" id="password" name="password" />
+		<label for="facebook">Facebook </label><input type="text" placeholder="Facebook" id="facebook" name="facebook" value="<?=$row['facebook_user']?>" />
+		<label for="twitter">Twitter </label><input type="text" placeholder="Twitter" id="twitter" name="twitter" value="<?=$row['twitter_user']?>"/>
+		<label for="email">e-mail </label><input type="text" placeholder="email" id="email" name="email" value="<?=$row['email_user']?>"/>
 		<input type="submit" name="add" value="Actualizar">
 		<?php 
 			}

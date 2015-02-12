@@ -4,10 +4,11 @@
 	}else{
 		foreach($values as $row){
 			$user = $row["name_user"];
+			Cookies::set("complete","Hola Bienvenuido ¡" .$user,"20-s");
 		}
 
 		if($user == $session){
-			return header('Location:'.Rutas::getDireccion('admin'));
+			Redirection::go("admin");
 		}else{
 			session_destroy();
 		}

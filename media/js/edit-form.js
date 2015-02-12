@@ -1,8 +1,10 @@
 
 $(function(){
 	$(".edit").click(function(){
-		ruta = "http://" + window.location.hostname + ":8888";
-		var user=$(this).parent().attr("id");
+		puerto = window.location.port;
+		ruta = "http://" + window.location.hostname + ":" + puerto;
+		var user=$(this).parent().parent().attr("id");
+		console.log(user);
 		getUser(user);
 		$("#form-edit").show(100);
 	});	
@@ -17,10 +19,12 @@ $(function(){
 
 
 function getUser(user){
-	$.ajax(
+	puerto = window.location.port;
+	ruta = "http://" + window.location.hostname + ":" + puerto;
+	$.ajax(		
 		{
 			type: "POST",
-	        url: ruta + "/edit-user/select",
+	        url: ruta + "/user/edit/",
 	        data:{
 	        	name : user
 	        },
@@ -28,7 +32,6 @@ function getUser(user){
 	        dataType: 'json',
 		}
 	)
-
 	.done(
 		function(){
 			alert("Exito");

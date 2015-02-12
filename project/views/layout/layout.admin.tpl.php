@@ -48,7 +48,7 @@
 				</form>
 			</a>
 			</li>
-			<a href="/edit-user"><li>Editar Perfil</li></a>
+			<a href="/user/me"><li>Editar Perfil</li></a>
 		</ul>
 	</div>
 

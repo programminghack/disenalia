@@ -69,10 +69,11 @@
                 ('$name', '$description')
             "))
             {
-                echo "<script>alert('Registrado Correctamente')</script>";
-                header('Location:'.Rutas::getDireccion('category'));
+               Cookies::set("complete","Se a guardado correctamente","20-s");
+              Redirection::go("category");
             }else{
-                exit("El registro no se ha completado por algun motivo");
+               Cookies::set("alert","Error: No se ha registrado intenta de nuevo","20-s");
+               Redirection::go("category");
             }
         }
 
@@ -85,11 +86,12 @@
                 WHERE id_category = '$id'
             "))
             {
-                echo "<script>alert('Editado Correctamente')</script>";
-                header('Location:'.Rutas::getDireccion('category'));
+               Cookies::set("edit","Se a editado correctamente","20-s");
+             Redirection::go("category");
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+               Cookies::set("alert","Error: No se ha editado intenta de nuevo","20-s");
+               Redirection::go("category");
             }
         }
 
@@ -99,10 +101,12 @@
                 DELETE FROM category
                 WHERE id_category = '$id'
             ")){
-                header('Location:'.Rutas::getDireccion('category'));
+               Cookies::set("delete","Se a eliminado correctamente","20-s");
+               Redirection::go("category");
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+               Cookies::set("alert","Error: No se ha eliminado intenta de nuevo","20-s");
+               Redirection::go("category");
             }
         }
     }

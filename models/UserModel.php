@@ -73,15 +73,19 @@
                             ('$name', '$nick_name', '$avatar', '$email', '$type', '$direccion', '$ciudad', '$postal', '$web')
                         "))
                     {
-                        exit("Registro Completo");
+                       Cookies::set("complete","Se ha creadi el usuario correctamente","20-s");
+                       Redirection::go("user");
                     }else{
-                        exit("El registro no se ha completado por algun motivo");
+                       Cookies::set("alert","Error: por algun motivo no se pudo crear el usuario intenta de nuevo","20-s");
+                       Redirection::go("user");
                     }
                 }else{
-                    exit("El correo ya esta registrado");
+                   Cookies::set("alert","¡Atencion! El usuario ya existe","20-s");
+                   Redirection::go("user");
                 }
             }else{
-                exit("El usuario ya existe");
+               Cookies::set("alert","¡Atencion! El usuario ya existe","20-s");
+               Redirection::go("user");
             }
         }
 
@@ -94,10 +98,12 @@
                 WHERE name_user = '$name'
             "))
             {
-                exit("Se ha modificado correctamente");
+               Cookies::set("edit","Se ha editado el usuario correctamente","20-s");
+               Redirection::go("user");
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+               Cookies::set("alert","Error: No se ha podido editar el usuario intenta de nuevo","20-s");
+               Redirection::go("user");
             }
         }
 
@@ -110,10 +116,12 @@
                 WHERE name_user = '$user'
             "))
             {
-                exit("Se ha modificado correctamente");
+               Cookies::set("edit","Se ha editado el Avatar correctamente","20-s");
+               Redirection::go("admin");
             }else
             {
-                exit("Ocurrio un error en la modificacion");
+               Cookies::set("alert","Error: No se ha podido editar el avatar intenta de nuevo","20-s");
+              Redirection::go("admin");
             }
         }
 
@@ -123,10 +131,12 @@
                 DELETE FROM user
                 WHERE id_user = '$id'
             ")){
-                exit("Se a eliminado correctamente");
+               Cookies::set("delete","Se ha eliminado el usuario correctamente","20-s");
+               Redirection::go("admin");
             }else
             {
-                exit("Ocurrio algun error o el archivo ya no existe");
+               Cookies::set("alert","Error: No se ha podido eliminar el usuario intenta de nuevo","20-s");
+              Redirection::go("admin");
             }
         }
     }

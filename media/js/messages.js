@@ -32,7 +32,7 @@ for (var i = 0; i < cookies.length;  i++){
             $("#msj").animate({
                opacity : 0
             },1000);
-         },4000);
+         },1700);
 		}
 	}
 }

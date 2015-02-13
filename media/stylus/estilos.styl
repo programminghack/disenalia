@@ -1,13 +1,22 @@
 @import "normalize.styl"
 
 @font-face
+	font-family KlinicM
+	font-style medium
+	src url("/media/fonts/KlinicM.otf")
+
+@font-face
+	font-family KlinicL
+	font-style medium
+	src url("/media/fonts/KlinicL.otf")
+
+@font-face
 	font-family Roboto
-	font-style light
+	font-style medium
 	src url("/media/fonts/Roboto/Roboto.ttf")
 
 morado = #32006E
-gris_verdoso = #33D9C2
-verde_azulado = #32006E
+verde_azulado = #33D9C2
 
 body,
 html
@@ -23,16 +32,203 @@ p
 	padding 0
 
 body
-	background #fff
+	font-family KlinicM
+	background #E6E6E6
 	font-size 16px
 
+.header_front
+	background white
+	box-shadow 0px 0px 5px rgba(0,0,0,.4)
+	margin 0 1.5em 1.5em 1.5em
+	max-width 1600px
+	& figure
+		padding 2em 0
+		margin 0 auto
+		max-width 700px
+		& img
+			width 100%
+
+#container
+	background white
+	box-shadow 0px 0px 5px rgba(0,0,0,.4)
+	overflow hidden
+	margin 1.5em
+	max-width 1600px
+	& .box-cont
+		float left
+		margin .6em .3em
+		max-width 75%
+		& #blog-post
+			-moz-column-count: 3;
+			-moz-column-gap: 10px;
+			-moz-column-fill: auto;
+			-webkit-column-count: 2;
+			-webkit-column-gap: 10px;
+			-webkit-column-fill: auto;
+			column-count: 2;
+			column-gap: 5px;
+			column-fill: auto;
+			width 100%
+			& .src-post
+				display block
+			& .post
+				border-top .4em solid verde_azulado
+				-moz-column-break-inside: avoid;
+				-webkit-column-break-inside: avoid;
+				column-break-inside: avoid;
+				display: inline-block;
+				margin: 0 2px 15px;
+				padding: 15px;
+				border: 2px solid #FAFAFA;
+				box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+				background: #FEFEFE;
+				background-image: linear-gradient(45deg, #FFF, #F9F9F9);
+				position relative
+				max-width 550px
+				&:hover
+					box-shadow: 0 0px 12px rgba(50, 0, 110, 0.6);
+				& figure
+					border-top .4em solid verde_azulado
+					width 100%
+					& img
+						width 100%
+					& .share
+						background morado
+						padding .8em 0
+						& a
+							color white
+							font-size 1.2em
+							text-decoration none
+						& .rds
+							& span
+								border-radius 50%
+								border 1px solid white
+								font-size .8em
+								display inline-block
+								margin 0 .3em
+								text-align center
+								line-height 25px
+								height 25px
+								width 25px
+						& .like-views
+							float right
+							& .icns
+								margin 0 .3em
+								& span
+									border-radius 50%
+									float left
+									margin 0 .3em
+									text-align center
+									line-height 25px
+									height 25px
+									width 25px
+								& p
+									float left
+									font-size .7em
+									line-height 30px
+				& .date-comts
+					background verde_azulado
+					border-bottom 3px solid #059670
+					color white
+					text-shadow 0px 0px 2px rgba(0,0,0,.7)
+					position absolute
+					top 1em
+					left 2em
+					padding .5em
+					& .cont
+						float left
+						& span
+							float left
+							margin 0 .3em
+						& p
+							float left
+							margin 0 .3em
+				& .content
+					& h1
+						color morado
+						font-size 1.3em
+					& p
+						color morado
+						font-family KlinicL
+	& .box-right
+		background #E6E6E6
+		float left
+		margin .6em .3em
+		width 300px
+		& .search
+			padding 1em
+			text-align center
+			-moz-box-sizing border-box
+			box-sizing border-box
+			width 100%
+			& .form_sch
+				margin .3em auto
+				overflow hidden
+				width 280px
+				& input[type="text"]
+					border none
+					background morado
+					color white
+					height 30px
+					-moz-box-sizing border-box
+					box-sizing border-box
+					padding 0 1em
+					float left
+					width 240px
+				& span
+					-moz-box-sizing border-box
+					box-sizing border-box
+					background verde_azulado
+					cursor pointer
+					height 30px
+					padding 5px
+					float left
+					width 30px
+
+
 footer
+	background morado
 	border-bottom 2px solid black
-	color #0F4051
+	color white
 	padding 1em 0
 	width 100%
+	& .cont
+		max-width 1100px
+		margin 0 auto
+		overflow hidden
+		& .box-foo
+			border-top .3em solid verde_azulado
+			width 300px
+			float left
+			padding 1em 0
+			text-align center
+			margin 1em
+			& figure
+				margin 0 auto
+				width 50%
+				& img
+					width 100%
+			& p
+				padding .6em 0
+				text-align left
+				line-height 1.7em
+			& h1
+				color verde_azulado
+				font-size 1.4em
+			& a
+				img
+					margin 1em
+
+
+
+
+
+
+//Inician los estilos para el Administrador del Blog
+
 
 #msj
+	font-family Roboto
 	background rgba(255, 255, 255, .88)
 	bottom 1em
 	border-radius .4em
@@ -70,7 +266,7 @@ footer
 .alert_msj
 	border 1px solid #d5d02f
 	figure
-		background #e3e84c
+		background #ddca00
 
 
 .hide
@@ -92,13 +288,15 @@ footer
 			display inline-block
 
 
-//Inician los estilos para el Administrador del Blog
+
+
 
 #body-admin
 	background #E6E6E6
 	font-family Roboto
 
 #box-login
+	font-family Roboto
 	padding 1em
 	background white
 	border-radius .3em
@@ -191,7 +389,7 @@ footer
 			text-decoration none
 			& li
 				padding 1em
-				color gris_verdoso
+				color verde_azulado
 				transition all .7s ease
 				&:hover
 					background morado
@@ -213,7 +411,7 @@ footer
 		top 4em
 		left .7em
         & li a
-			color gris_verdoso
+			color verde_azulado
 			display block
 			font-size .8em
 			padding 1em
@@ -222,7 +420,7 @@ footer
 			list-style none
 			& span
 				font-size 3em
-				color gris_verdoso
+				color verde_azulado
 				display block
 				margin-bottom .3em
 
@@ -231,7 +429,7 @@ footer
 	margin-left 140px
 	max-width 1400px
 	& h1
-		color gris_verdoso
+		color verde_azulado
 	& .content-estatics-one
 		border-collapse: separate;
 		border-spacing: 0 .9em;
@@ -255,7 +453,7 @@ footer
 		& .colum-content-statics
 			background #fff
 			& td
-				color gris_verdoso
+				color verde_azulado
 				padding .5em
 				margin-top 2em
 		& .paginator-statics
@@ -269,7 +467,7 @@ footer
 	margin-left 140px
 	max-width 1400px
 	& h1
-		color gris_verdoso
+		color verde_azulado
 	& .table-content-post
 		border-collapse: separate;
 		border-spacing: 0 .5em;
@@ -292,12 +490,12 @@ footer
 			&:hover
 				back
 			& td
-				color gris_verdoso
+				color verde_azulado
 				padding .7em
 			& .actions-content
 				text-align center
 				& a
-					color gris_verdoso
+					color verde_azulado
 					font-size 1.4em
 					text-decoration none
 					margin 0 .3em
@@ -330,7 +528,7 @@ footer
 	margin-left 140px
 	max-width 1400px
 	& h1
-		color gris_verdoso
+		color verde_azulado
 	& .table-content-category
 		border-collapse: separate;
 		border-spacing: 0 .5em;
@@ -350,12 +548,12 @@ footer
 			box-shadow 0 2px 3px rgba(0,0,0,0.3)
 			background #fff
 			& td
-				color gris_verdoso
+				color verde_azulado
 				padding .7em
 			& .actions-content
 				text-align center
 				& a
-					color gris_verdoso
+					color verde_azulado
 					font-size 1.4em
 					text-decoration none
 					margin 0 .3em
@@ -421,7 +619,7 @@ footer
 		position relative
 		& form
 			& input[type="text"]
-				color verde_azulado
+				color morado
 				display block
 				font-size 1em
 				height 30px
@@ -449,7 +647,7 @@ footer
 					padding 0 1em
 					font-size 1.4em
 			& select
-				color verde_azulado
+				color morado
 				border morado 2px solid
 				display block
 				font-size 1.1em
@@ -484,12 +682,12 @@ footer
 		padding 3em 0
 		width 900px
 		& h1
-			color verde_azulado
+			color morado
 			font-size 2.3em
 			text-align center
 		& form
 			& input[type="text"]
-				color verde_azulado
+				color morado
 				display block
 				font-size 1.2em
 				height 40px
@@ -501,7 +699,7 @@ footer
 					outline none
 					border 3px solid morado
 			& .label1
-				color verde_azulado
+				color morado
 				display block
 				text-align center
 				padding 1em 0
@@ -509,12 +707,12 @@ footer
 			& .radios
 				text-align center
 				& .label2
-					color verde_azulado
+					color morado
 					padding 0 1em
 					font-size 1.4em
 			& select
-				color verde_azulado
-				border 1px solid verde_azulado
+				color morado
+				border 1px solid morado
 				display block
 				font-size 1.1em
 				margin 2em auto
@@ -523,10 +721,10 @@ footer
 				outline none
 				width 300px
 			& input[type="submit"]
-				border verde_azulado 3px solid
+				border morado 3px solid
 				border-radius .4em
 				background none
-				color verde_azulado
+				color morado
 				cursor pointer
 				margin 2em auto
 				padding .6em
@@ -545,12 +743,12 @@ footer
 		padding 3em 0
 		width 900px
 		& h1
-			color verde_azulado
+			color morado
 			font-size 2.3em
 			text-align center
 		& form
 			& input[type="text"]
-				color verde_azulado
+				color morado
 				display block
 				font-size 1.2em
 				height 40px
@@ -562,10 +760,10 @@ footer
 					outline none
 					border 3px solid morado
 			& input[type="submit"]
-				border verde_azulado 3px solid
+				border morado 3px solid
 				border-radius .4em
 				background none
-				color verde_azulado
+				color morado
 				cursor pointer
 				margin 2em auto
 				padding .6em
@@ -582,3 +780,6 @@ footer
 	background #3A3A3A
 	position float
 	display none
+
+
+@import "responsive.styl"

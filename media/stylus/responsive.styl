@@ -1,0 +1,32 @@
+@media screen and (min-width: 1600px)
+   header
+      max-width 100%
+
+   #container
+      max-width 100%
+
+
+@media screen and (max-width: 1350px)
+   #container
+      & .box-cont
+         max-width 70%
+
+@media screen and (max-width: 1120px)
+   #container
+      & .box-cont
+         max-width 65%
+
+
+@media screen and (max-width: 970px)
+   #container
+      & .box-cont
+         max-width 100%
+
+@media screen and (max-width: 670px)
+   #container
+      & .box-cont
+         & #blog-post
+            -webkit-column-count: 1;
+            column-count: 1;
+            & .post
+               max-width 670px

@@ -74,6 +74,11 @@
 					<span class="icon-tags"></span>
 				</a>
 			</li>
+			<li>
+				<a href="/user">
+					<span class="icon-user"></span>
+				</a>
+			</li>
 		</ul>
 	</nav>
 

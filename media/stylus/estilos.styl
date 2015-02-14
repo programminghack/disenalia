@@ -58,6 +58,12 @@ body
 		float left
 		margin .6em .3em
 		max-width 75%
+		& .search_v
+			border-bottom 3px solid #150037
+			font-size 1.3em
+			background morado
+			color white
+			padding .3em .5em
 		& #blog-post
 			-moz-column-count: 3;
 			-moz-column-gap: 10px;
@@ -69,6 +75,13 @@ body
 			column-gap: 5px;
 			column-fill: auto;
 			width 100%
+			& .error_search
+				max-width 550px
+				& h1
+					color morado
+					font-size 1.2em
+					padding 2em 0
+					height 200px
 			& .src-post
 				display block
 			& .post
@@ -155,6 +168,39 @@ body
 		float left
 		margin .6em .3em
 		width 300px
+		& .profile
+			margin 0 auto
+			padding 1em 0
+			width 270px
+			& .pub
+				display block
+				color morado
+				text-align center
+				font-size 1.4em
+			& .avtr
+				text-align center
+				width 100%
+				& img
+					border-radius 50%
+					border 4px solid morado
+					height 150px
+					margin-top .2em
+					width 150px
+			& .read
+				display block
+				font-size 1.2em
+				color morado
+				text-align center
+			& .share
+				background morado
+				text-align center
+				padding .3em 0
+				width 100%
+				& a
+					color white
+					font-size 1.3em
+					margin 0 1em
+					text-decoration none
 		& .search
 			padding 1em
 			text-align center
@@ -180,10 +226,186 @@ body
 					box-sizing border-box
 					background verde_azulado
 					cursor pointer
+					color morado
 					height 30px
 					padding 5px
 					float left
 					width 30px
+		& .tags
+			width 100%
+			& .head
+				padding 0 1em
+				text-align center
+				-moz-box-sizing border-box
+				box-sizing border-box
+				overflow hidden
+				& p
+					border none
+					background morado
+					color white
+					height 30px
+					-moz-box-sizing border-box
+					box-sizing border-box
+					float left
+					line-height 30px
+					text-align left
+					padding 0 1em
+					width 238px
+				& span
+					-moz-box-sizing border-box
+					box-sizing border-box
+					background verde_azulado
+					color morado
+					cursor pointer
+					height 30px
+					padding 5px
+					float left
+					width 30px
+			& .cont
+				padding 0 1em
+				text-align center
+				-moz-box-sizing border-box
+				box-sizing border-box
+				overflow hidden
+				margin .7em 0
+				width 100%
+				& a
+					background verde_azulado
+					color morado
+					display inline-block
+					padding .4em 0
+					margin .5em .22em
+					text-decoration none
+					width 120px
+		& .recommendations
+			margin-bottom 1em
+			width 100%
+			& .head
+				padding 0 1em
+				text-align center
+				-moz-box-sizing border-box
+				box-sizing border-box
+				overflow hidden
+				& p
+					color morado
+					background verde_azulado
+					height 30px
+					-moz-box-sizing border-box
+					box-sizing border-box
+					float left
+					line-height 30px
+					text-align left
+					padding 0 1em
+					width 238px
+				& span
+					-moz-box-sizing border-box
+					box-sizing border-box
+					background morado
+					color verde_azulado
+					cursor pointer
+					height 30px
+					padding 5px
+					float left
+					width 30px
+			& .cont
+				border-top 2px dashed verde_azulado
+				background morado
+				padding 1em 1em
+				text-align left
+				-moz-box-sizing border-box
+				box-sizing border-box
+				overflow hidden
+				margin 0 auto
+				width 268px
+				& a
+					color white
+					display inline-block
+					margin .2em 0
+					text-decoration none
+					width 120px
+		& .banners
+			padding .1em 0
+			text-align center
+			width 100%
+			img
+				width 270px
+	& #go-read
+		width 100%
+		& .post
+			margin .6em auto
+			max-width 85%
+			& figure
+				border-top 6px solid verde_azulado
+				position relative
+				width 100%
+				& .date-comts
+					background verde_azulado
+					border-bottom 3px solid #059670
+					color white
+					text-shadow 0px 0px 2px rgba(0,0,0,.7)
+					position absolute
+					top 0
+					left 2em
+					padding .5em
+					& .cont
+						float left
+						& span
+							float left
+							margin 0 .3em
+						& p
+							float left
+							margin 0 .3em
+				& img
+					width 100%
+				& .share
+					text-align center
+					width 100%
+					& a
+						border 2px solid verde_azulado
+						color verde_azulado
+						font-size 1.4em
+						padding .5em 0
+						display inline-block
+						text-align center
+						text-decoration none
+						transition all .5s ease-out
+						margin .5em .1em
+						width 45%
+						&:hover
+							border 2px solid morado
+							color white
+							background morado
+			& .content
+				h1
+					border-bottom 3px solid verde_azulado
+					color morado
+					font-size 1.8em
+					padding .4em 0
+				& .prevpost
+					font-size 18px
+					color #808080
+					font-style italic
+					margin .5em auto
+					width 80%
+					& p
+						line-height 1.5em
+				& .postfull
+					font-size 18px
+					color #808080
+					margin .5em auto
+					width 90%
+					& p
+						line-height 1.5em
+						margin .8em 0
+						& strong
+							color #5a5a5a
+					& img
+						height auto
+						width 100%
+					& iframe
+						width 100%
+					& a
+						color morado
 
 
 footer

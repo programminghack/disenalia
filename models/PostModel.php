@@ -58,6 +58,21 @@
 
         }
 
+		public function search($value)
+		{
+			$query = $this->conn->getConsultar("
+				SELECT *
+				FROM post
+				WHERE CONCAT(title_post,'',prev_post,'',post_post) LIKE '%$value%'
+			");
+
+			while($row = $query->fetch_array(MYSQLI_ASSOC)){
+				$this->rowsAll[] = $row;
+			}
+
+			return $this->rowsAll;
+		}
+
         public function getFull()
         {
             $query = $this->conn->getConsultar("

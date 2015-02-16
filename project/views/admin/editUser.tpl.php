@@ -1,6 +1,6 @@
 <section  id="home-admin-content">
 	<h1>Editar Usuario</h1>
-	<form action="/edit-user/update" method="post">
+	<form action="/user/update" method="post">
 		<?php
 			foreach ($values as $row) {
 		?>		

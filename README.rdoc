@@ -1,0 +1,4 @@
+==Diseñalia v1.2
+
+Diseñalia es un sitema de blog creado con el framework YOi.
+
